@@ -1,7 +1,8 @@
 const express = require ("express");
 const cors = require("cors");
 const products = require("./products");
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const register = require("./routes/register")
 
 
 
@@ -12,6 +13,8 @@ require("dotenv").config()
 
 app.use(express.json());
 app.use(cors());
+
+app.use("/api/register", register);
 
 app.get("/", (req, res) => {
     res.send("Welcome to our online shop API")
