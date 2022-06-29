@@ -2,11 +2,11 @@ const express = require ("express");
 const cors = require("cors");
 const products = require("./products");
 const mongoose = require("mongoose");
-const register = require("./routes/register")
+const register = require("./routes/register");
 
 
 
-const app = express();
+const app = express.Router();
 
 require("dotenv").config()
 
